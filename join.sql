@@ -34,4 +34,15 @@ SELECT * FROM "user"
 
 
 INSERT INTO post (id, title, user_id) VALUES
-(5, 'This is a test post title!', NULL)
+(5, 'This is a test post title!', NULL);
+
+SELECT * FROM post as p
+ LEFT JOIN "user"  u on p.user_id = u.id
+;
+SELECT * FROM post as p
+ RIGHT JOIN "user"  u on p.user_id = u.id
+;
+
+SELECT * FROM post as p
+ FULL JOIN "user"  u on p.user_id = u.id
+;
