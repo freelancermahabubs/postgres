@@ -7,3 +7,11 @@ select now();
 select CURRENT_DATE;
 select now():: date;
 select now():: time;
+SELECT to_char(now(), 'yyy/mm/dd');
+
+SELECT CURRENT_DATE - INTERVAL '1 year 2 month';
+
+SELECT age(CURRENT_DATE, '1996-07-29');
+SELECT *, age(CURRENT_DATE, dob) FROM students;
+SELECT extract(year FROM '2024-01-25':: DATE);
+SELECT 1:: BOOLEAN;
